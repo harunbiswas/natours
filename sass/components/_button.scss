@@ -41,11 +41,11 @@
   }
 
   &-white {
-    background-color: $color-while;
+    background-color: $color-white;
     color: $color-grey-dark;
 
     &::after {
-      background-color: $color-while;
+      background-color: $color-white;
     }
   }
 
@@ -69,7 +69,7 @@
 
   &:hover {
     background-color: $color-primary;
-    color: $color-while;
+    color: $color-white;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(-2px);
   }

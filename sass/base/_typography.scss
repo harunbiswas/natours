@@ -6,7 +6,7 @@ body {
 }
 
 .heading-primary {
-  color: $color-while;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   padding-bottom: 5rem;
@@ -44,6 +44,7 @@ body {
     $color-primary-dark
   );
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   transition: all 0.2s;
   letter-spacing: 2px;
