@@ -4,13 +4,32 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vartical;
+
+    @include respond(tap-port) {
+      margin-bottom: $gutter-vartical-small;
+    }
   }
+
+  @include respond(tap-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   @include clearfix;
 
   [class^="col-"] {
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tap-port) {
+        margin-right: 0 !important;
+        margin-bottom: $gutter-vartical-small;
+      }
+    }
+
+    @include respond(tap-port) {
+      width: 100% !important;
     }
   }
 }

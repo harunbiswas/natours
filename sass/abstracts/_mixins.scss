@@ -5,3 +5,54 @@
     clear: both;
   }
 }
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600PX;             PHONE
+601PX - 900PX          TABLET PORTREIT
+901PX - 1200PX         TABLET LANDSCOPE
+[1201PX - 1800PX]      IS WHERE OUR NORMAL STYLES APPLY
+1800PX + :             BIG DESKTOP
+
+
+$breakpoint argument choices
+- phone
+- tap-port
+- tap-land
+- big-dexktop
+
+order: base + typography layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tap-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tap-land {
+    @media (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      // 1800px
+      @content;
+    }
+  }
+}
